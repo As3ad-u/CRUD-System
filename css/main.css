@@ -1,0 +1,163 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: #222;
+    color: #fff;
+    font-family: sans-serif;
+}
+.crud{
+    width: 80%;
+    margin: auto;
+}
+.crud .container .head{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+.crud .container .head .head-title::after{
+    content: '';
+    animation-duration: 2S;
+    animation-name: headTyping;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;    
+}
+@keyframes headTyping{
+    0%{
+        content: 'R..'
+    }
+    30%{
+        content: 'RU.'
+
+    }
+    55%{
+        content: 'RUD'
+
+    }
+    75%{
+        content: 'RU.'
+    }
+    85%{
+        content: 'R..'
+    }
+}
+.crud .container .head p{
+    font-size: 20px;
+}
+
+/* // general style for input  */
+input{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: rgba(133, 133, 133, 0.362);
+    color: white;
+    margin: 4px 0;
+    transition: 1s all;
+    -webkit-transition: 1s all;
+    -moz-transition: 1s all;
+    -ms-transition: 1s all;
+    -o-transition: 1s all;
+}
+::placeholder{
+    padding: 5px;
+    color: white;
+
+}
+input:focus{
+    background-color: rgb(133, 133, 133);
+    transform: scaleX(1.1);
+    -webkit-transform: scaleX(1.1);
+    -moz-transform: scaleX(1.1);
+    -ms-transform: scaleX(1.1);
+    -o-transform: scaleX(1.1);
+}
+.crud .container .inputs .price-input{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.crud .container .inputs .price-input input{
+    width: 20%;
+}
+.crud .container .inputs .price-input #total{
+    background-color: chocolate;
+    padding: 5px 2px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+.crud .container .inputs .price-input #total::before{
+    content: "Total: ";
+}
+/* // general style for button  */
+button{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    background-color: rgba(133, 133, 133, 0.362);
+    color: white;
+    transition: 1s all;
+    /*margin: 4px 0;
+    */
+    -webkit-transition: 1s all;
+    -moz-transition: 1s all;
+    -ms-transition: 1s all;
+    -o-transition: 1s all;
+}
+button:hover{
+    background-color: rgb(133, 133, 133);
+    transform: scaleX(1.1);
+    -webkit-transform: scaleX(1.1);
+    -moz-transform: scaleX(1.1);
+    -ms-transform: scaleX(1.1);
+    -o-transform: scaleX(1.1);
+    letter-spacing: 1px;
+}
+.crud .container .outputs{
+    padding-top: 5px;
+}
+.crud .container .outputs .search-products .btn-search{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.delete-all-div{
+    margin: 8px 0;
+}
+table th{
+    text-transform: uppercase;
+}
+table td , th{
+    border: 1px solid rgba(255, 255, 255, 0.448);
+    padding: 5px ;
+}
+.edit , .delete{
+    font-size: 20px;
+    cursor: pointer;
+    transition: color 1s;
+    -webkit-transition: color 1s;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s;
+    -o-transition: color 1s;
+}
+.edit:hover , .delete:hover{
+    color: rgb(151, 148, 148);    
+}

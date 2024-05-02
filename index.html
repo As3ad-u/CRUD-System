@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>CRUDS System</title>
+</head>
+<body>
+        <div class="crud">
+            <div class="container">
+
+            <div class="head">
+                <h1 class="head-title">c</h1>
+                <p>Product Management System</p> 
+            </div>
+            <div class="inputs">
+                <input type="text" name="title" id="title" placeholder="title" >
+                <div class="price-input">
+                    <input onkeyup="getTotal()" type="number"  id="price" placeholder="price" >
+                    <input onkeyup="getTotal()" type="number" id="taxes" placeholder="taxes">
+                    <input onkeyup="getTotal()" type="number" id="ads" placeholder="ads">
+                    <input onkeyup="getTotal()" type="number" id="discount" placeholder="discount">
+                    <span id="total"></span>
+                </div>
+                <input type="number" id="count" placeholder="count">
+                <input type="text" id="category" placeholder="category">
+                <button id="create">Create Product</button>
+            </div>
+            <div class="outputs">
+                <div class="search-products">
+                    <input type="search" onkeyup="searchProduct(this.value)" id="search" placeholder="search">
+                    <div class="btn-search">
+                        <button id="searchTitle" onclick="getSearchMode(this.id)">Search By Title</button>
+                        <button id="searchCategory" onclick="getSearchMode(this.id)">Search By Category</button>
+
+                    </div>
+                </div>
+                <div class="delete-all-div">
+                </div>
+                <table class="table  my-3 text-center text-white">
+                    <thead class=" bg-info ">
+                        <tr>
+                            <th>id</th>
+                            <th>title</th>
+                            <th>Price</th>
+                            <th>taxes</th>
+                            <th>ads</th>
+                            <th>discount</th>
+                            <th>total</th>
+                            <th>category</th>
+                            <th>Update</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tBody">
+                        </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js" integrity="sha512-AA1Bzp5Q0K1KanKKmvN/4d3IRKVlv9PYgwFPvm32nPO6QS8yH1HO7LbgB1pgiOxPtfeg5zEn2ba64MUcqJx6CA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
